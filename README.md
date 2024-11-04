@@ -38,7 +38,7 @@ performance, and monthly sales trends. With my Excel tool i will
 The first thing I did was to calculate the revenue for each of the row on the Sale Dataset by multiplying the Quantity row by the UnitPrice row
 
 ```excel
-=F2*GS
+=F2*G5
 
 ```
 
@@ -285,7 +285,7 @@ while West generated the lowest sales with a total of 300,345.
 
 - Sales were higher in the month of February of both year 2023 and 2024 while in year 2023 April sales was
 the lowest with a total sales of 7,425 and in year 2024 July had the lowest sales with a total of 37,200.
-- There is need for the organization to coduct a sales poll in order to know why sales are particularly low in April of 2023 and 2024
+- There is need for the organization to conduct a sales poll in order to know why sales are particularly low in April of 2023 and 2024
   this will give an insight into how sales can be boosted in those months in the coming year.
  
 ![image](https://github.com/user-attachments/assets/f05d7c68-7d7d-48e9-892b-3f0d84f8f995)

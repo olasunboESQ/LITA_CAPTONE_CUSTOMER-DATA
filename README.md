@@ -19,11 +19,24 @@ and to identify the most popular subscription type.
 
 ```
 
+```excel
+=count(subscriptiontypes colunm, a subscriptiontype)= most popular subscription type
+
+```
+
+The result of my Customer data can be found on my excel workbook [githubsales.xlsx](https://github.com/user-attachments/files/17618330/githubsales.xlsx)
+
+I used Pivort tables and Pivort Charts to analyze subscription pattern
+
+	
+       Sum of Revenue by SUBSCRIPTION TYPE	
+
+![image](https://github.com/user-attachments/assets/099625bb-c22c-4d36-9896-114ecb350c38)
 
 
+    	Count of Subscription Duration by Region
 
-
-
+![image](https://github.com/user-attachments/assets/abfdd535-1706-4a76-b1e8-9fb50755341d)
 
 
 

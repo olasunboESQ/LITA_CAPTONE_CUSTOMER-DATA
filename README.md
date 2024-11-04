@@ -51,24 +51,114 @@ I used Pivort tables and Pivort Charts to analyze subscription pattern
 
 
 
+### Structured Query Language
 
+This is the second tool i used to analyze the Customer Data. I imported the data into a databased I had created and started writing queries which i ran in order to get 
+answers to the questions below:
+In order to know if my data is correctly entered i ran this query to see my table
 
+```sql
 
+select * from customerdata
 
+```
+- retrieve the total number of customers from each region.
+```sql
 
+ select region, count (distinct customerid) as total_customers
+ from [dbo].[CustomerData]
+ group by Region 
+ order by total_customers desc
 
-2. SQL:
-Hint – You need to load the dataset into your SQL Server environment to write
-and validate your queries.
-Write queries to extract key insights based on the following questions.
-o retrieve the total number of customers from each region.
-o find the most popular subscription type by the number of customers.
-o find customers who canceled their subscription within 6 months.
-o calculate the average subscription duration for all customers.
-o find customers with subscriptions longer than 12 months.
-o calculate total revenue by subscription type.
-o find the top 3 regions by subscription cancellations.
-o find the total number of active and canceled subscriptions.
+```
+
+ - find the most popular subscription type by the number of customers.
+
+```sql
+
+select subscriptionType ,
+ count (customerid) as num_customers
+ from CustomerData 
+ group by SubscriptionType 
+ order by num_customers desc
+
+```
+
+- find customers who canceled their subscription within 6 months.
+
+```sql
+
+select customerid, SubscriptionType ,SubDuration 
+ as sub_duration
+ from CustomerData 
+ where Canceled = 'TRUE' AND SubDuration  <=180
+
+```
+
+- calculate the average subscription duration for all customers.
+
+```sql
+
+SELECT AVG(DATEDIFF(MONTH,SUBSCRIPTIONSTART,
+ COALESCE(SUBSCRIPTIONEND, SUBSCRIPTIONSTART))) AS AVG_SUBDURATION
+ FROM CUSTOMERDATA
+
+```
+
+ - find customers with subscriptions longer than 12 months.
+
+```sql
+
+SELECT CUSTOMERNAME,
+ SUBSCRIPTIONSTART,SUBSCRIPTIONEND,
+ DATEDIFF(MONTH, SUBSCRIPTIONSTART, COALESCE(SUBSCRIPTIONEND,SUBSCRIPTIONSTART))
+ AS SUBDURATION FROM customerdata 
+ WHERE DATEDIFF (MONTH,SUBSCRIPTIONSTART, COALESCE (SUBSCRIPTIONEND,SUBSCRIPTIONSTART))<=12
+ ORDER BY SUBDURATION DESC
+
+```
+
+- calculate total revenue by subscription type.
+
+```sql
+
+SELECT REGION,
+ SUM(REVENUE) AS TOTAL_REGIONAL_REVENUE
+ FROM customerdata 
+ GROUP BY REGION
+ ORDER BY TOTAL_REGIONAL_REVENUE ASC
+
+```
+
+- find the top 3 regions by subscription cancellations.
+
+  ```sql
+
+ SELECT TOP 3 REGION,
+ COUNT (SUBSCRIPTIONEND) AS TOTALCANCELATION
+ FROM customerdata 
+ WHERE SubscriptionEnd IS NOT NULL
+ GROUP BY REGION ORDER BY TOTALCANCELATION DESC
+        OR
+ SELECT TOP 3 REGION,
+ COUNT (Canceled ) AS TOTALCANCELATION
+ FROM customerdata 
+ WHERE Canceled  IS NOT NULL
+ GROUP BY REGION ORDER BY TOTALCANCELATION DESC
+
+ ```
+ 
+-  find the total number of active and canceled subscriptions.
+
+```sql
+
+SELECT SUM (CASE WHEN CANCELED IS NULL AND SUBSCRIPTIONEND>SUBSCRIPTIONSTART
+ THEN 1 ELSE 0 END) AS TOTAL_ACTIVE_SUBS,
+ SUM(CASE WHEN CANCELED IS NOT NULL THEN 1 ELSE 0 END) AS TOTAL_CANCELEDSUBS
+ FROM CUSTOMERDATA
+
+```
+
 3. Power BI:
 o Build a Power BI dashboard that visualizes key customer segments,
 cancellations, and subscription trends. Include slicers for interactive analysis.

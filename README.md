@@ -192,9 +192,13 @@ Include slicers for interactive analysis.
 From the Analysis conducted on the Customer Data, the following are the findings:
 
 a. There are theree Subscription Types namely Basic, Premium and Standard.
+
 b. The Most Popular Subscription Type is Basic with 16,921 Subscribers while others had 8446, 8420 respectively.
+
+The Organizaton can improve their customer's subscription pattern by making subscription types more attractive and not too expensive.
+
 c. The Average Duration Subscription for all the subscription types is 365.
-d. 
+
 
 
 

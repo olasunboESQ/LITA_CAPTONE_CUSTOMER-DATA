@@ -153,6 +153,19 @@ SELECT SUM (CASE WHEN CANCELED IS NULL AND SUBSCRIPTIONEND>SUBSCRIPTIONSTART
 
 ```
 
-### Power BI: the third tool I used
-o Build a Power BI dashboard that visualizes key customer segments,
-cancellations, and subscription trends. Include slicers for interactive analysis.
+### Power BI: the third tool I used to create a report and visualization of all findings.
+
+Firstly, I imported my Customer Data from Excel Workbook then transfrom the data to see how clean it is. 
+I created some measures such as 
+
+i. Average revenue
+ii. Average Subscription Duration
+iii. Total revenue
+
+
+
+Include slicers for interactive analysis.
+
+![Screenshot (29)](https://github.com/user-attachments/assets/9fb42112-80df-479a-a769-c26d48671c20)
+
+

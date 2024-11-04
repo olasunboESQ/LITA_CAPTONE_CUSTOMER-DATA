@@ -132,20 +132,14 @@ SELECT REGION,
 
 - find the top 3 regions by subscription cancellations.
 
-  ```sql
+```sql
 
- SELECT TOP 3 REGION,
- COUNT (SUBSCRIPTIONEND) AS TOTALCANCELATION
- FROM customerdata 
- WHERE SubscriptionEnd IS NOT NULL
- GROUP BY REGION ORDER BY TOTALCANCELATION DESC
-        OR
- SELECT TOP 3 REGION,
+SELECT TOP 3 REGION,
  COUNT (Canceled ) AS TOTALCANCELATION
  FROM customerdata 
  WHERE Canceled  IS NOT NULL
  GROUP BY REGION ORDER BY TOTALCANCELATION DESC
-
+ 
  ```
  
 -  find the total number of active and canceled subscriptions.
@@ -159,6 +153,6 @@ SELECT SUM (CASE WHEN CANCELED IS NULL AND SUBSCRIPTIONEND>SUBSCRIPTIONSTART
 
 ```
 
-3. Power BI:
+### Power BI: the third tool I used
 o Build a Power BI dashboard that visualizes key customer segments,
 cancellations, and subscription trends. Include slicers for interactive analysis.

@@ -33,12 +33,20 @@ I used Pivort tables and Pivort Charts to analyze subscription pattern
 
 ![image](https://github.com/user-attachments/assets/099625bb-c22c-4d36-9896-114ecb350c38)
 
-
     	Count of Subscription Duration by Region
 
 ![image](https://github.com/user-attachments/assets/abfdd535-1706-4a76-b1e8-9fb50755341d)
+	
+         Count of CustomerID in each Region per Subscription type
+
+![image](https://github.com/user-attachments/assets/4a650420-585e-47d9-b52e-1beea92d9aab)
 
 
+![image](https://github.com/user-attachments/assets/8a4cbbc6-e227-47ca-a6cb-9a44ca705abc)
+
+![image](https://github.com/user-attachments/assets/d914525d-8130-4f27-9638-e62e57fa08dc)
+
+![image](https://github.com/user-attachments/assets/8ca6498c-4b58-4dd2-a2e5-0dcfba887f85)
 
 
 

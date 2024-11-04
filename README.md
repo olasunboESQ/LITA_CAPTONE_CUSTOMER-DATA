@@ -169,3 +169,16 @@ Include slicers for interactive analysis.
 ![Screenshot (29)](https://github.com/user-attachments/assets/9fb42112-80df-479a-a769-c26d48671c20)
 
 
+#### FINDINGS AND RECOMMENDATION
+
+From the Analysis conducted on the Customer Data, the following are the findings:
+
+a. There are theree Subscription Types namely Basic, Premium and Standard.
+b. The Most Popular Subscription Type is Basic with 16,921 Subscribers while others had 8446, 8420 respectively.
+c. The Average Duration Subscription for all the subscription types is 365.
+d. 
+and identify key trends in cancellations and renewals
+
+
+
+

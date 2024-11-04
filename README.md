@@ -1,10 +1,28 @@
-# LITA_CAPTONE_CUSTOMER-DATA
+# PROJECT TITLE: LITA_CAPTONE_CUSTOMER-DATA
 
-### Project 2 Overview Customer Segmentation for a Subscription Service
+[Project Overview](#project-overview)
 
-### Microsoft Excel 
+[Data Analysis Tools](#data-analysis-tools)
 
-This is the first analytic tool I used in exploring the Customer Data and i used it to answer the following questions:
+ [Structured Query Language](#structured-query-language)
+ 
+ [Power BI](#power-bi)
+
+[FINDINGS AND RECOMMENDATIONS](#findings-and-recommendations)
+
+### Project Overview 
+
+This is a Customer Segmentation for a Subscription Service , I am tasked with  analyzing customer data for a subscription service to identify
+segments and trends. My goal is to understand customer behavior, track subscription types,
+and identify key trends in cancellations and renewals.
+
+### Data Analysis Tools
+
+i. Microsoft Excel 
+ii. Structured Query Language (SQL)
+iii. Power BI
+
+The first analytic tool I used in exploring the Customer Data is Excel and i used it to answer the following questions:
 
 - Calculate the average subscription duration and identify the most popular subscription types.
 - Analyze customer data using pivot tables to find subscription patterns.
@@ -153,7 +171,7 @@ SELECT SUM (CASE WHEN CANCELED IS NULL AND SUBSCRIPTIONEND>SUBSCRIPTIONSTART
 
 ```
 
-### Power BI: the third tool I used to create a report and visualization of all findings.
+## Power BI: the third tool I used to create a report and visualization of all findings.
 
 Firstly, I imported my Customer Data from Excel Workbook then transfrom the data to see how clean it is. 
 I created some measures such as 
@@ -169,7 +187,7 @@ Include slicers for interactive analysis.
 ![Screenshot (29)](https://github.com/user-attachments/assets/9fb42112-80df-479a-a769-c26d48671c20)
 
 
-#### FINDINGS AND RECOMMENDATION
+## FINDINGS AND RECOMMENDATIONS
 
 From the Analysis conducted on the Customer Data, the following are the findings:
 
@@ -177,7 +195,7 @@ a. There are theree Subscription Types namely Basic, Premium and Standard.
 b. The Most Popular Subscription Type is Basic with 16,921 Subscribers while others had 8446, 8420 respectively.
 c. The Average Duration Subscription for all the subscription types is 365.
 d. 
-and identify key trends in cancellations and renewals
+
 
 
 
